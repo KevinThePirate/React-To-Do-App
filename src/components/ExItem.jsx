@@ -1,5 +1,6 @@
 import React from "react";
 import "./ExItem.css";
+import { Link } from "react-router-dom";
 
 export default function ExItem(props) {
   const performExDelete = () => {
@@ -37,6 +38,7 @@ export default function ExItem(props) {
         <h4>{props.exercise.title}</h4>
         <div className="buttons">
           <button onClick={performExDelete}> Delete </button>
+          <Link to={`/exercises/${props.exercise.id}/edit`}> Edit </Link>
           <button onClick={performToggleEx}> Toggle </button>
         </div>
       </div>

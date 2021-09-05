@@ -23,7 +23,7 @@ const HomePage = () => {
   const toggleExComplHandler = (id) => {
     console.log("id is ", id);
     const clonedEx = [...excercises];
-    const clickedIndex = clonedEx.findIndex((excercise) => (excercise.id = id));
+    const clickedIndex = clonedEx.findIndex((excercise) => excercise.id === id);
     const clickedEx = clonedEx[clickedIndex];
     clickedEx.complete = !clickedEx.complete;
     setExcercises(clonedEx);
